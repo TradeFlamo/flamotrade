@@ -49,7 +49,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
 
 # 🚀 快速开始
 
-0. 具备 vps+域名（如api.abc.xyz并指向此 VPS）
+0. 具备 vps+域名（如api.abc.xyz并指向此 vps）
 1. caddy 反向代理 http://127.0.0.1:7000
 2. 下载二进制（Releases 中）
 3. 编辑同目录下的 `flamoconfig.json`:
