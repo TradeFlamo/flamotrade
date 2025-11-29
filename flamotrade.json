@@ -1,11 +1,11 @@
 {
-"tradeTunnel":"ff20150225",
-"telegram":{
-	"token":"---",
-	"chatId":"---"
-	},
-"binance":{
-	"apiKey":"---",
-	"secretKey":"---"
-	}
+"binance": {
+"api_key": "YOUR_KEY",
+"api_secret": "YOUR_SECRET"
+},
+"telegram": {
+"token": "YOUR_TELE_TOKEN",
+"chat_id": "YOUR_CHAT_ID"
+},
+"tradeTunnel": "your_tunnel_password"
 }

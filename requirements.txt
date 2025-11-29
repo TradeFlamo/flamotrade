@@ -1,0 +1,5 @@
+ccxt
+fastapi
+uvicorn
+pydantic
+requests
