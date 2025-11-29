@@ -70,7 +70,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
   "amount": "1.5",
   "usdt": "100",
   "multiple": "0.3*5",
-  "price": "{{close}}",
+  "price": "0",
   "orderType": "market",
   "cancelLast": "false",
   "closeLast": "reverse",
@@ -83,7 +83,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
   "side": "CLOSEBUY",
   "amount": "0",
   "ratio": "1.0",
-  "price": "{{close}}",
+  "price": "{{close}}*1.01",
   "orderType": "limit",
   "cancelLast": "true",
   "tradeTunnel": "your tradeTunnel password"
