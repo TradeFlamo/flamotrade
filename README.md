@@ -49,21 +49,19 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
 
 # 🚀 快速开始
 
-1. 下载二进制（Releases 中）
-2. 编辑 `flamoconfig.json`
-3. 填入：
+0. VPS + 域名（如api.abc.xyz并指向此 VPS）
+1. caddy 反向代理 http://127.0.0.1:7000
+2. 下载二进制（Releases 中）
+3. 编辑 `flamoconfig.json`:
+   填入：
    * tradeTunnel
    * Binance API KEY / SECRET
    * Telegram BOT Token / Chat ID
-4. 启动：
-
-```
+4. 启动 webhook 服务:
 ./flamotrade-lite
-```
 
-5. TradingView 配置 Webhook URL:https://xxx.xxx.xxx/buySell(or closePosition)，内容格式示例：
-
-```
+6. TradingView 配置警报 Webhook URL:"https://api.abc.xyz/buySell"(或另一接口closePosition)，
+   警报内容格式示例：
 {
   "symbol": "ETHUSDT",
   "side": "BUY",
