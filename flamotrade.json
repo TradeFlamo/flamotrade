@@ -1,0 +1,11 @@
+{
+"tradeTunnel":"ff20150225",
+"telegram":{
+	"token":"---",
+	"chatId":"---"
+	},
+"binance":{
+	"apiKey":"---",
+	"secretKey":"---"
+	}
+}
