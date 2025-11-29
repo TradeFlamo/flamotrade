@@ -2,7 +2,7 @@
 
 > 🎯 一个极简、稳定、可真实下单的开源小工具，让你用 TradingView 的警报自动执行交易指令（单账号版）。
 
-FlamoTrade Lite 是一个 **轻量级、可自行部署** 的Tradingview警报自动交易 Agent：
+Flamotrade Lite 是一个 **轻量级、可自行部署** 的Tradingview警报自动交易 Agent：
 
 * 支持 TradingView Webhook
 * 自动执行 **买入 / 卖出 / 平仓**
@@ -61,7 +61,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
 ./flamotrade-lite
 ```
 
-5. TradingView 配置 Webhook URL:https://xxx.xxx.xxx/buySell，内容格式示例：
+5. TradingView 配置 Webhook URL:https://xxx.xxx.xxx/buySell(or closePosition)，内容格式示例：
 
 ```
 {
@@ -77,8 +77,17 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
   "reduceOnly": "false",
   "tradeTunnel": "your tradeTunnel password"
 }
-```
-
+---or---
+{
+  "symbol": "ETHUSDT",
+  "side": "CLOSEBUY",
+  "amount": "0",
+  "ratio": "1.0",
+  "price": "{{close}}",
+  "orderType": "limit",
+  "cancelLast": "true",
+  "tradeTunnel": "your tradeTunnel password"
+}
 ---
 
 # 📦 配置文件示例
