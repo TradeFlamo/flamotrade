@@ -59,10 +59,10 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
    * Telegram BOT Token / Chat ID
 4. 启动 webhook 服务:
 ./flamotrade-lite
-5. 浏览器查看自动接口文档
+5. 浏览器查看自动接口文档  
    本地运行服务输入http://127.0.0.1:7000/docs  
    vps运行服务输入https://api.abc.xyz/docs  
-7. TradingView 警报配置 Webhook URL:"https://api.abc.xyz/buySell"(或另一接口closePosition)，
+7. TradingView 警报配置: Webhook URL:"https://api.abc.xyz/buySell"(或另一接口closePosition)   
    警报内容格式示例：
 ```json
 {
