@@ -1,8 +1,8 @@
-# flamotrade Lite —— TradingView Webhook 到 Binance 的轻量级自动交易工具
+# flamotrade Lite —— TradingView 到 Binance 的轻量级自动交易工具
 
 > 🎯 一个极简、稳定、可真实下单的开源小工具，让你用 TradingView 的警报自动执行交易指令（单账号版）。
 
-FlamoTrade Lite 是一个 **轻量级、可自行部署** 的自动交易 Agent：
+FlamoTrade Lite 是一个 **轻量级、可自行部署** 的Tradingview警报自动交易 Agent：
 
 * 支持 TradingView Webhook
 * 自动执行 **买入 / 卖出 / 平仓**
@@ -22,7 +22,7 @@ Light 版仅支持 **单账户 / 基础市价单 / 买卖平仓**，保证极小
 
 # ✨ 特性
 
-### ✔ 单账户 Binance 自动下单
+### ✔ 单账户 Binance 永续合约U本位自动下单
 
 TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
 
@@ -39,7 +39,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
 无数据库
 无后台管理
 仅一个配置文件
-最适合部署在 1 美元的 VPS 上运行。
+最适合部署在 5 美元的 VPS 上运行。
 
 ### ✔ 纯本地运行，安全
 
@@ -50,9 +50,9 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
 # 🚀 快速开始
 
 1. 下载二进制（Releases 中）
-2. 编辑 `config.json`
+2. 编辑 `flamotrade.json`
 3. 填入：
-
+   * tradeTunnel
    * Binance API KEY / SECRET
    * Telegram BOT Token / Chat ID
 4. 启动：
@@ -61,12 +61,21 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
 ./flamotrade-lite
 ```
 
-5. TradingView 配置 Webhook URL，内容格式示例：
+5. TradingView 配置 Webhook URL:https://xxx.xxx.xxx/buySell，内容格式示例：
 
 ```
 {
-  "side": "buy",
-  "symbol": "BTCUSDT"
+  "symbol": "ETHUSDT",
+  "side": "BUY",
+  "amount": "1.5",
+  "usdt": "100",
+  "multiple": "0.3*5",
+  "price": "{{close}}",
+  "orderType": "market",
+  "cancelLast": "false",
+  "closeLast": "reverse",
+  "reduceOnly": "false",
+  "tradeTunnel": "your tradeTunnel password"
 }
 ```
 
@@ -76,6 +85,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
 
 ```json
 {
+  "tradeTunnel":"your json transport password",
   "binance": {
     "api_key": "YOUR_KEY",
     "api_secret": "YOUR_SECRET"
@@ -93,13 +103,14 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
 
 如果你需要：
 
+* 统一的 webhook 接口
 * 多账户同时下单
 * 异步并行执行
-* 自动风控
-* 表达式解析（如 *数量 × 杠杆 − 百分比*）
-* 完整限流系统
+* 下单失败重试（网络、交易所等短暂失败）
+* 表达式解析（如 *数量 × 百分比*）
+* 完美规避交易所对VPS的Ip执行的限流
 * 多交易所（Binance + OKX）
-* 高级订单（止盈、止损、反手、市价平仓增强版）
+* 高级订单（止盈、止损、入场价止损、买卖单带止盈止损、撤单、平仓等增强版）
 * 更高速的执行引擎
 * Telegram 全链路操作报告
 * 单信号 50+ 账户批处理（含速率控制）
