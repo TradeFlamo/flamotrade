@@ -62,7 +62,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
 
 6. TradingView 配置警报 Webhook URL:"https://api.abc.xyz/buySell"(或另一接口closePosition)，
    警报内容格式示例：
-   ```json
+```json
 {
   "symbol": "ETHUSDT",
   "side": "BUY",
