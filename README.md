@@ -50,7 +50,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
 # 🚀 快速开始
 
 1. 下载二进制（Releases 中）
-2. 编辑 `config.json`
+2. 编辑 `flamoconfig.json`
 3. 填入：
    * tradeTunnel
    * Binance API KEY / SECRET
