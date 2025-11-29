@@ -89,7 +89,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
 }
 
 
-# 📦 配置文件示例
+# 📦 配置文件flamoconfig.json示例
 
 {
   "tradeTunnel":"your json transport password",
