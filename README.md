@@ -128,7 +128,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
 你可以购买 **FlamoTrade Pro（付费编译版）**。
 
 👉 购买地址：
-🔗 [https://your-lemon-link](https://lemon-link) （你之后填）
+🔗 [https://lemon-link](https://lemon-link) （你之后填）
 
 ---
 
