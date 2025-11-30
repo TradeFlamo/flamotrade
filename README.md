@@ -1,4 +1,4 @@
-# <img src="flamo.png" width="20"/> flamotrade Lite —— TradingView 到 Binance 的轻量级自动交易工具
+# <img src="flamo.png" width="15"/> flamotrade Lite —— TradingView 到 Binance 的轻量级自动交易工具
 ![Downloads](https://img.shields.io/github/downloads/TradeFlamo/flamotrade/total.svg)
 > 🎯 一个极简、稳定、可真实下单的开源小工具，让你用 TradingView 的警报自动执行交易指令（单账号版）。
 
@@ -80,6 +80,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
   "reduceOnly": "false",           # 也可true。是否只对持仓减仓。用它与closeLast的reverse实现同方向多次下单只执行第一次下单
   "tradeTunnel": "Tunnel password" # 为TradingView警报json传输安全而设计。应与配置文件中完全相同，否则不接受此次订单
 }
+
 警报平仓json
 {
   "symbol": "ETHUSDT",
@@ -92,9 +93,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
   "tradeTunnel": "Tunnel password"
 }
 
-
 # 📦 配置文件flamoconfig.json示例
-
 {
   "tradeTunnel":"tunnel password",
   "binance": {
