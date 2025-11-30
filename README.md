@@ -1,4 +1,4 @@
-# flamotrade Lite —— TradingView 到 Binance 的轻量级自动交易工具
+# <img src="flamo.png" width="20"/> flamotrade Lite —— TradingView 到 Binance 的轻量级自动交易工具
 ![Downloads](https://img.shields.io/github/downloads/TradeFlamo/flamotrade/total.svg)
 > 🎯 一个极简、稳定、可真实下单的开源小工具，让你用 TradingView 的警报自动执行交易指令（单账号版）。
 
