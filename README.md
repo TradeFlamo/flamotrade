@@ -66,6 +66,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
    警报内容json格式示例:  
    <键名要与下面完全相同。值全为字符串，大小写均可，但tradeTunnel的值大小写敏感)>
 ```json
+警报买卖json
 {
   "symbol": "ETHUSDT",             # 可以是Binance永续合约上线的其它加密币
   "side": "BUY",                   # 可用:buy/sell
@@ -79,7 +80,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
   "reduceOnly": "false",           # 也可true。是否只对持仓减仓。用它与closeLast的reverse实现同方向多次下单只执行第一次下单
   "tradeTunnel": "Tunnel password" # 为TradingView警报json传输安全而设计。应与配置文件中完全相同，否则不接受此次订单
 }
----or---
+警报平仓json
 {
   "symbol": "ETHUSDT",
   "side": "CLOSEBUY",              # 可用:closeBuy/closeSell/x。X为平掉任何方向的持仓
