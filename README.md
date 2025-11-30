@@ -4,9 +4,9 @@
 
 Flamotrade Lite 是一个 **轻量级、可自行部署** 的Tradingview警报自动交易 Agent：
 
-* 支持 TradingView Webhook
+* 支持 TradingView Alert Webhook
 * 自动执行 **买入 / 卖出 / 平仓**
-* 市价单即时成交
+* 买卖市价单即时成交，可多空限价市价平仓
 * Telegram 实时通知
 * 仅需一个 JSON 配置 + 一个二进制文件即可运行
 
@@ -16,7 +16,7 @@ Flamotrade Lite 是一个 **轻量级、可自行部署** 的Tradingview警报�
 * 想测试 TradingView 下单链路是否可靠
 * 想先试试自动化策略，但暂时不需要复杂功能的人
 
-Light 版仅支持 **单账户 / 基础市价单 / 买卖平仓**，保证极小且稳定。
+Lite 版仅支持 **单账户 / 市价买卖单 / 市价限价多空平仓**。
 
 ---
 
@@ -43,7 +43,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
 
 ### ✔ 纯本地运行，安全
 
-你自己的 API Key 只保留在你自己 VPS 的配置文件中。
+你自己的 API Key 只保留在你自己 VPS 的配置文件中，永不外传泄露。
 
 ---
 
