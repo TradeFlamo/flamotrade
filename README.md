@@ -59,42 +59,43 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
    * Telegram BOT Token / Chat ID
 4. 启动 webhook 服务:
 ./flamotrade-lite
-5. 浏览器查看自动接口文档  
+5. 浏览器查看相同自动生成的接口文档  
    本地运行服务输入http://127.0.0.1:7000/docs  
    vps 运行服务输入https://api.abc.xyz/docs  
 7. TradingView 警报配置: Webhook URL:"https://api.abc.xyz/buySell"(或另一接口closePosition)   
-   警报内容格式示例：
+   警报内容json格式示例:  
+   <键名要与下面完全相同。值全为字符串，大小写均可，但tradeTunnel的值大小写敏感)>
 ```json
 {
-  "symbol": "ETHUSDT",
-  "side": "BUY",
-  "amount": "1.5",
-  "usdt": "100",
-  "multiple": "0.3*5",
-  "price": "0",
-  "orderType": "market",
-  "cancelLast": "false",
-  "closeLast": "reverse",
-  "reduceOnly": "false",
-  "tradeTunnel": "your tradeTunnel password"
+  "symbol": "ETHUSDT",             # 可以是Binance永续合约上线的其它加密币
+  "side": "BUY",                   # 可用:buy/sell
+  "amount": "1.5",                 # 买卖数量
+  "usdt": "100",                   # 买卖所用的usdt。amount为0时使用
+  "multiple": "0.3*5",             # 账户可用usdt的比例*当前杠杆。amount与usdt均为0时使用
+  "price": "0",                    # 买卖价格。市价单不用此值
+  "orderType": "market",           # 也可limit。但Lite免费版不支持limit，pro版支持
+  "cancelLast": "false",           # 也可true。是否取消此前的所有买卖挂单(非止盈止损单)
+  "closeLast": "reverse",          # 可用:true/false/reverse。true为下此单前市价平掉所有持仓，reverse为下此单前只市价平相反方向的持仓
+  "reduceOnly": "false",           # 也可true。是否只对持仓减仓。用它与closeLast的reverse实现同方向多次下单只执行第一次下单
+  "tradeTunnel": "Tunnel password" # 为TradingView警报json传输安全而设计。应与配置文件中完全相同，否则不接受此次订单
 }
 ---or---
 {
   "symbol": "ETHUSDT",
-  "side": "CLOSEBUY",
+  "side": "CLOSEBUY",              # 可用:closeBuy/closeSell/x。X为平掉任何方向的持仓
   "amount": "0",
-  "ratio": "1.0",
+  "ratio": "1.0",                  # 当前持仓的比例。amount为0时使用
   "price": "{{close}}*1.01",
-  "orderType": "limit",
+  "orderType": "limit",            # 也可market，Lite免费版都支持
   "cancelLast": "true",
-  "tradeTunnel": "your tradeTunnel password"
+  "tradeTunnel": "Tunnel password"
 }
 
 
 # 📦 配置文件flamoconfig.json示例
 
 {
-  "tradeTunnel":"your json transport password",
+  "tradeTunnel":"tunnel password",
   "binance": {
     "api_key": "YOUR_KEY",
     "api_secret": "YOUR_SECRET"
@@ -125,7 +126,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
 * 单信号 50+ 账户批处理（含速率控制）
 * SaaS 跨用户级多账户系统
 
-你可以购买 **FlamoTrade Pro（付费编译版）**。
+你可以购买 **FlamoTrade Pro（闭源付费编译版）**。
 
 👉 购买地址：
 🔗 [https://lemon-link](https://lemon-link) （你之后填）
