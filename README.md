@@ -58,8 +58,9 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
    * Binance API KEY / SECRET
    * Telegram BOT Token / Chat ID
 4. 启动 webhook 服务:
-./flamotrade-lite
-5. 浏览器查看系统自动生成的接口文档  
+   ./flamotrade-lite
+5. 将 vps的 IP 地址写入 Binance 的 API 容许访问列表中
+6. 浏览器查看系统自动生成的接口文档  
    本地运行服务输入http://127.0.0.1:7000/docs  
    vps 运行服务输入https://api.abc.xyz/docs  
 7. TradingView 警报配置: Webhook URL:"https://api.abc.xyz/buySell"(或另一接口closePosition)   
