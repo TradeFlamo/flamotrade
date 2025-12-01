@@ -49,7 +49,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
 
 # 🚀 快速开始
 
-0. 具备 vps+域名（如 abc.xyz）并设置 api.abc.xyz 指向此 vps 的 IP）
+0. 具备 vps+域名（如 abc.xyz）并设置 api.abc.xyz 指向此 vps 的 IP
 1. 在 caddy 配置文件中设置 api.abc.xpz 反向代理到 http://127.0.0.1:7000
 2. 下载二进制（Releases 中）
 3. 编辑同目录下的 `flamoconfig.json`:
@@ -63,7 +63,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
 6. 浏览器查看系统自动生成的接口文档  
    本地运行服务输入http://127.0.0.1:7000/docs  
    vps 运行服务输入https://api.abc.xyz/docs  
-7. TradingView 警报配置: Webhook URL: https://api.abc.xyz/buySell（或另一接口 closePosition）
+7. TradingView 警报配置: Webhook URL: https://api.abc.xyz/buySell（或另一接口 closePosition）  
    警报内容json格式示例:  
    <键名要与下面完全相同。值全为字符串，大小写均可，但tradeTunnel除外，其值大小写敏感>
 ```json
