@@ -79,7 +79,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
   "cancelLast": "false",           # 也可true。是否取消此前的所有买卖挂单(非止盈止损单)
   "closeLast": "reverse",          # 可用:true/false/reverse。true为下此单前市价平掉所有持仓，reverse为下此单前只市价平相反方向的持仓
   "reduceOnly": "false",           # 也可true。是否只对持仓减仓。用它与closeLast的reverse实现同方向多次下单只执行第一次下单
-  "tradeTunnel": "Tunnel password" # 为TradingView警报json传输安全而设计。应与配置文件中完全相同，否则不接受此次订单
+  "tradeTunnel": "tunnel password" # 为TradingView警报json传输安全而设计。应与配置文件中完全相同，否则不接受下单
 }
 
 警报平仓json
@@ -91,7 +91,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
   "price": "{{close}}*1.01",
   "orderType": "limit",            # 也可market，Lite免费版都支持
   "cancelLast": "true",
-  "tradeTunnel": "Tunnel password"
+  "tradeTunnel": "tunnel password"
 }
 
 # 📦 配置文件flamoconfig.json示例
