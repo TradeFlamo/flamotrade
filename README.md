@@ -51,7 +51,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
 
 0. 具备 vps+域名（如 abc.xyz）并设置 api.abc.xyz 指向此 vps 的 IP
 1. 在 caddy 配置文件中设置 api.abc.xpz 反向代理到 http://127.0.0.1:7000
-2. 下载二进制（Releases 中）
+2. 下载二进制:https://github.com/TradeFlamo/flamotrade/releases
 3. 编辑同目录下的 `flamoconfig.json`:
    填入：
    * tradeTunnel （TradingView警报里填的值的要与此处相同！）
