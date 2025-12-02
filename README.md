@@ -64,7 +64,7 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
    本地运行服务输入http://127.0.0.1:7000/docs  
    vps 运行服务输入https://api.abc.xyz/docs  
 7. TradingView 警报配置: Webhook URL: https://api.abc.xyz/buySell（或另一接口 closePosition）  
-   警报内容json格式示例:  
+   警报内容:两种json格式:  
    <键名要与下面完全相同。值全为字符串，大小写均可，但tradeTunnel除外，其值大小写敏感>
 ```json
 警报买卖json
