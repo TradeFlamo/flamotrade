@@ -127,9 +127,9 @@ TradingView → Webhook → FlamoTrade Lite → Binance 市价成交。
 * 单信号 50+ 账户批处理（含速率控制）
 * SaaS 跨用户级多账户系统
 
-你可以购买 **FlamoTrade Pro（闭源付费编译版）**。
+你可以免费使用与订阅 **SaaS 版或自部署版**
 
-👉 购买地址：
+👉 官网：
 🔗 [https://www.flamohub.cc
 
 ---
